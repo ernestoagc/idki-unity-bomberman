@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     
     public List<GameObject> obstacles;
     public GameObject player;
-    public GameObject startScreen;
     public Transform obstaclesParent;
     public bool isGameOver=false;
     public GameObject gem;
@@ -24,8 +23,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
-       // winManager = GameObject.Find("WinManager").GetComponent<WinManager>();
+        StartGame();
+        // winManager = GameObject.Find("WinManager").GetComponent<WinManager>();
     }
 
     // Update is called once per frame
@@ -99,7 +98,6 @@ public class GameManager : MonoBehaviour
         BuildObstacles();
         DrawPlayer(player);
         player.SetActive(true);
-        startScreen.SetActive(false);
     }
 
     public void RestartGame()

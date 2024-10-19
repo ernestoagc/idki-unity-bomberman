@@ -53,10 +53,7 @@ public class PlayerController : MonoBehaviour
        
 
     }
-
-    private void Walking()
-    {
-    }
+    
 
     void OnParticleCollision(GameObject other)
     { 
@@ -65,6 +62,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetBool("Death_b",true);
             playerAnim.SetInteger("DeathType_int",2);
             gameManager.GameOver(false);
+            gameManager.isGameOver = true;
         }
     }
 
